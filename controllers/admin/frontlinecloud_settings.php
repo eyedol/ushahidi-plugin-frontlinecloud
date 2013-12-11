@@ -15,6 +15,7 @@
 */
 
 class Frontlinecloud_Settings_Controller extends Admin_Controller {
+
 	public function index()
 	{
 		$this->template->this_page = 'addons';

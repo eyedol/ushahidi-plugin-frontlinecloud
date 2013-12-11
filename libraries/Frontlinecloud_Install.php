@@ -26,23 +26,19 @@ class Frontlinecloud_Install {
 		// ****************************************
 		// DATABASE STUFF
 		$this->db->query("
-			CREATE TABLE IF NOT EXISTS `".Kohana::config('database.default.table_prefix')."frontlinecloud`
+			CREATE TABLE IF NOT EXISTS `".Kohana::config('database.default.table_prefix')."frontlinecloud_settings`
 			(
 				id int(11) unsigned NOT NULL AUTO_INCREMENT,
 				frontlinecloud_key varchar(100) DEFAULT NULL,
 				PRIMARY KEY (`id`)
 			);
 		");
-		// ****************************************
-	}
 
 	/**
 	 * Drops the frontlinecloud Tables
 	 */
 	public function uninstall()
 	{
-		$this->db->query("
-			DROP TABLE ".Kohana::config('database.default.table_prefix')."frontlinecloud;
-			");
+		$this->db->query("DROP TABLE ".Kohana::config('database.default.table_prefix')."frontlinecloud_settings;");
 	}
 }

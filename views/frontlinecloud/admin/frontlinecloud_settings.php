@@ -1,26 +1,12 @@
 <table style="width: 630px;" class="my_table">
 	<tr>
-		<td style="width:60px;">
+		<td>
 			<span class="big_blue_span"><?php echo Kohana::lang('ui_main.step');?> 1:</span>
-		</td>
-		<td>
-			<h4 class="fix"><a href="#" class="tooltip" title="<?php echo Kohana::lang("tooltips.settings_flsms_download"); ?>"><?php echo Kohana::lang('settings.sms.flsms_download');?></a></h4>
-			<p>
-				<?php echo Kohana::lang('settings.sms.flsms_description');?>.
-			</p>
-			<a href="http://www.frontlinecloud.com/the-software/frontlinecloud-version-1/" class="no_border">
-				<img src="<?php echo url::base() ?>media/img/admin/download_frontline_engine.gif" />
-			</a>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<span class="big_blue_span"><?php echo Kohana::lang('ui_main.step');?> 2:</span>
 		</td>
 		<td>
 			<h4 class="fix"><a href="#" class="tooltip" title="<?php echo Kohana::lang("tooltips.settings_flsms_synchronize"); ?>"><?php echo Kohana::lang('settings.sms.flsms_synchronize');?></a></h4>
 			<p>
-				<?php echo Kohana::lang('settings.sms.flsms_instructions');?>.
+				<?php echo Kohana::lang('settings.instructions');?>.
 			</p>
 			<p class="sync_key">
 				<?php echo Kohana::lang('settings.sms.flsms_key');?>: <span><?php echo $frontlinecloud_key; ?></span><br /><br />

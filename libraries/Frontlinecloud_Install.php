@@ -30,9 +30,11 @@ class Frontlinecloud_Install {
 			(
 				id int(11) unsigned NOT NULL AUTO_INCREMENT,
 				frontlinecloud_key varchar(100) DEFAULT NULL,
+				frontlinecloud_api_url varchar(255) DEFAULT NULL,
 				PRIMARY KEY (`id`)
 			);
 		");
+	}
 
 	/**
 	 * Drops the frontlinecloud Tables

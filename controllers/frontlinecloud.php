@@ -16,23 +16,32 @@
 
 class Frontlinecloud_Controller extends Controller
 {
+	private $request = array();
+
+	public function __construct()
+	{
+		$this->request = ($_SERVER['REQUEST_METHOD'] == 'POST')
+			? $_POST
+			: $_GET;
+	}
+
 	function index()
 	{
-		if (isset($_GET['key']))
+		if (isset($this->request['key']))
 		{
-			$frontlinecloud_key = $_GET['key'];
+			$frontlinecloud_key = $this->request['key'];
 		}
 
-		if (isset($_GET['s']))
+		if (isset($this->request['s']))
 		{
-			$message_from = $_GET['s'];
+			$message_from = $this->request['s'];
 			// Remove non-numeric characters from string
 			$message_from = preg_replace('#[^0-9]#', '', $message_from);
 		}
 
-		if (isset($_GET['m']))
+		if (isset($this->request['m']))
 		{
-			$message_description = $_GET['m'];
+			$message_description = $this->request['m'];
 		}
 
 		if ( ! empty($frontlinecloud_key) AND ! empty($message_from) AND ! empty($message_description))

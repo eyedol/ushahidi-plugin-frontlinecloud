@@ -21,7 +21,7 @@ class Frontlinecloud_Sms_Provider implements Sms_Provider_Core {
 
 				)
 			);
-			$response = $this->_web_client($data);
+			$response = $this->_web_client($data, $frontlinecloud->frontlinecloud_api_url);
 			if (stristr($response, "message successfully queued"))
 			{
 				return TRUE;
@@ -32,7 +32,7 @@ class Frontlinecloud_Sms_Provider implements Sms_Provider_Core {
 		return "message successfully queued to send to 1 recipient(s);";
 	}
 
-	private function _web_client($data = array())
+	private function _web_client($data = array(), $url)
 	{
 		// Make sure cURL is installed
 		if ( ! function_exists('curl_exec'))
@@ -42,9 +42,6 @@ class Frontlinecloud_Sms_Provider implements Sms_Provider_Core {
 		}
 
 		$curl_handle = curl_init();
-
-		// @TODO:: get the ID from the database to build the or the whole URL from the database
-		$url = "https://cloud.frontlinesms.com/api/1/webconnection/651";
 
 		$data_string = json_encode($data);
 		curl_setopt($curl_handle, CURLOPT_URL, $url);

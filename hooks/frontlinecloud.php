@@ -30,6 +30,15 @@ class frontlinecloud {
 	{
 		// SMS Provider
 		plugin::add_sms_provider("frontlinecloud");
+		Event::add('ushahidi_filter.controller_whitelist', array($this, 'add_to_whitelist'));
+	}
+
+	/**
+	 * Add frontlinecloud controller to whitelist
+	 */
+	public function add_to_whitelist()
+	{
+		Event::$data[] = 'frontlinecloud';
 	}
 }
 

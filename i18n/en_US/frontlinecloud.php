@@ -23,7 +23,8 @@ $lang = array(
 
 	'frontlinecloud_api_url' => array(
 		'required' => 'API URL is required',
-		'url' => 'Please provide a valid API URL'
+		'url' => 'Please provide a valid API URL',
+		'response_error' => 'Error sending reply'
 	),
 );
 ?>

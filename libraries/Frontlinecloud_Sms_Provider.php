@@ -29,7 +29,7 @@ class Frontlinecloud_Sms_Provider implements Sms_Provider_Core {
 			return $response;
 		}
 
-		return "message successfully queued to send to 1 recipient(s);";
+		return Kohana::lang('frontlinecloud.frontlinecloud_api_url.response_error');
 	}
 
 	private function _web_client($data = array(), $url)

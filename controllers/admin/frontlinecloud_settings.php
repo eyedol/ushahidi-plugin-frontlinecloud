@@ -42,9 +42,6 @@ class Frontlinecloud_Settings_Controller extends Admin_Controller {
 		}
 
 		$this->template->content->settings_form->frontlinecloud_key = $frontlinecloud_key;
-		$this->template->content->settings_form->frontlinecloud_link = url::site()."frontlinecloud";
-		$this->template->content->settings_form->frontlinecloud_sender = "\${message_src_number}";
-		$this->template->content->settings_form->frontlinecloud_message = "\${message_body}";
 		// setup and initialize form field names
 		$form = array
 		(

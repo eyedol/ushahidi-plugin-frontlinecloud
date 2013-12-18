@@ -26,13 +26,13 @@
 				<?php echo Kohana::lang('frontlinecloud.settings.enter_url');?>.
 			</p>
 			<p class="sync_key">
-				<?php echo $frontlinecloud_link; ?>
+				<?php echo url::site()."frontlinecloud" ?>
 			</p>
 			<p>
 				<?php echo Kohana::lang('frontlinecloud.settings.configure_sender');?>.
 			</p>
 			<p>
-				<?php echo Kohana::lang('frontlinecloud.settings.configure_sender_field', "\${sender_number}");?>.
+				<?php echo Kohana::lang('frontlinecloud.settings.configure_sender_field', "\${message_src_number}");?>.
 			</p>
 			<p>
 				<?php echo Kohana::lang('frontlinecloud.settings.configure_add_param');?>.
@@ -41,7 +41,7 @@
 				<?php echo Kohana::lang('frontlinecloud.settings.configure_message');?>.
 			</p>
 			<p>
-				<?php echo Kohana::lang('frontlinecloud.settings.configure_message_field', "\${message_content}");?>.
+				<?php echo Kohana::lang('frontlinecloud.settings.configure_message_field', "\${message_body}");?>.
 			</p>
 		</td>
 	</tr>

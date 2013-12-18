@@ -32,7 +32,7 @@
 				<?php echo Kohana::lang('frontlinecloud.settings.configure_sender');?>.
 			</p>
 			<p>
-				<?php echo Kohana::lang('frontlinecloud.settings.configure_sender_field', $frontlinecloud_sender);?>.
+				<?php echo Kohana::lang('frontlinecloud.settings.configure_sender_field', "\${sender_number}");?>.
 			</p>
 			<p>
 				<?php echo Kohana::lang('frontlinecloud.settings.configure_add_param');?>.
@@ -41,7 +41,7 @@
 				<?php echo Kohana::lang('frontlinecloud.settings.configure_message');?>.
 			</p>
 			<p>
-				<?php echo Kohana::lang('frontlinecloud.settings.configure_message_field', $frontlinecloud_message);?>.
+				<?php echo Kohana::lang('frontlinecloud.settings.configure_message_field', "\${message_content}");?>.
 			</p>
 		</td>
 	</tr>

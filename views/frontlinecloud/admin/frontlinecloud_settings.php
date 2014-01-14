@@ -43,6 +43,15 @@
 			<p>
 				<?php echo Kohana::lang('frontlinecloud.settings.configure_message_field', "\${message_body}");?>.
 			</p>
+			<p>
+				<?php echo Kohana::lang('frontlinecloud.settings.configure_add_param');?>.
+			</p>
+			<p>
+				<?php echo Kohana::lang('frontlinecloud.settings.configure_key');?>.
+			</p>
+			<p>
+				<?php echo Kohana::lang('frontlinecloud.settings.configure_key_field', $frontlinecloud_key);?>.
+			</p>
 		</td>
 	</tr>
 	<tr>

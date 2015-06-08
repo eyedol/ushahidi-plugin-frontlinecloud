@@ -2,7 +2,7 @@
 name: FrontlineCloud
 website: http://www.frontlinesms.com
 description: Receive Messages from a FrontlineCloud Installations
-version: 1.0
+version: 1.1
 requires: 2.0
 tested up to: 2.0
 author: Henry Addo

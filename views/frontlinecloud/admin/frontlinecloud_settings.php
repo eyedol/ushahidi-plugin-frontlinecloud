@@ -63,10 +63,6 @@
 			<p class"sync_key">
 				<?php echo Kohana::lang('frontlinecloud.settings.secret', '<span class="sync_key">'.$frontlinecloud_key.'</span>');?>.
 			</p>
-			<div class="row link-row">
-				<h4><?php echo Kohana::lang('frontlinecloud.settings.enter_api_url');?>.</h4>
-				<?php print form::input('frontlinecloud_api_url', $form['frontlinecloud_api_url'], ' class="text long"'); ?>
-			</div>
 		</td>
 	</tr>
 </table>
